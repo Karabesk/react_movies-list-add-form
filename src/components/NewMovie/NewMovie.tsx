@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { TextField } from '../TextField';
+import { Movie } from '../../types/Movie';
 
 interface NewMovieProps {
-  onAdd: (movie: {
-    title: string;
-    description: string;
-    imgUrl: string;
-    imdbUrl: string;
-    imdbId: string;
-  }) => void;
+  onAdd: (movie: Movie) => void;
 }
 
 export const NewMovie: React.FC<NewMovieProps> = ({ onAdd }) => {
